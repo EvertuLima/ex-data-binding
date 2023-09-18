@@ -1,0 +1,47 @@
+<section>
+    
+    <!-- <article>
+        <h3>Interpolation / Interpolação</h3>
+        <p>String renderizada por interpolação: {{ url }}</p>
+        <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+        <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
+        <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }} </p>
+        
+    </article>
+
+    <article>
+        <h3>Property Binding</h3>        
+        <img src="{{ urlImagem }}">
+        <img [src]="urlImagem">
+        <img bind-src="urlImagem">
+    </article>  -->
+    <!-- > Valor do Componente para o Template
+    > Usa-se colchetes <img [src]="urlImg"/>
+    > Formato padrão é através de bind-nomePropriedade <img bind-src="urlImagem">
+    > Quando não existe uma propriedade no elemento, usa-se [attr.colspan]  -->
+
+    <article>
+        <h3>Class e Style Binding</h3>
+        <div>
+            Selecione uma classe:
+            <select #classe (change) = '0'>
+                <option value="alert-success">Sucesso</option>
+                <option value="alet-info"Info>Info</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <br><br>
+
+            <div class="alert" role="alert"
+            [class.alert-success]="classe.value == 'alert-success'">
+                Sucesso
+            </div>
+            <div class="alert alert-inf" role="alert">...</div>
+            <div class="alert alert-warning" role="alert">...</div>
+            <div class="alert alert-danger" role="alert">...</div>
+
+        </div>
+    </article>
+
+
+</section>
