@@ -26,9 +26,11 @@ export class DataBindingComponent {
   }
   onKeyUp(evento: KeyboardEvent){
     console.log();
-    this.valorAtual = (<HTMLInputElement>evento.target).value
+    this.valorAtual = (<HTMLInputElement>evento.target).value;
   }
-  salvarValor(valor: any){
-    this.valorSalvo = valor;
+  
+  salvarValor(valor: any) {
+    console.log();
+    this.valorSalvo = (valor.target as HTMLInputElement).value;
   }
 }
