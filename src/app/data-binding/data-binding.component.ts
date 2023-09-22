@@ -3,7 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
-  styleUrls: ['./data-binding.component.css']
+  //styleUrls: ['./data-binding.component.css']
+  styles: [
+    `
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+    `
+
+  ]
 })
 export class DataBindingComponent {
 
@@ -13,6 +22,7 @@ export class DataBindingComponent {
 
   valorAtual: string = '';
   valorSalvo: string = '';
+  isMouseOver: boolean = false;
 
   getValor(){
     return 1;
@@ -32,6 +42,9 @@ export class DataBindingComponent {
   salvarValor(valor: any) {
     console.log();
     this.valorSalvo = (valor.target as HTMLInputElement).value;
+  }
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver;
   }
 
 }
