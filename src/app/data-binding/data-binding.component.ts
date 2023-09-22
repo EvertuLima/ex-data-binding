@@ -33,4 +33,5 @@ export class DataBindingComponent {
     console.log();
     this.valorSalvo = (valor.target as HTMLInputElement).value;
   }
+
 }
