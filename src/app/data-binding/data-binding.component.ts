@@ -24,6 +24,9 @@ export class DataBindingComponent {
   valorSalvo: string = '';
   isMouseOver: boolean = false;
 
+  nome: any = 'abc';
+  nome2 = ""
+  email = ""
   getValor(){
     return 1;
   }
@@ -34,9 +37,10 @@ export class DataBindingComponent {
   botaoClicado(){
     window.alert('Botão clicado');
   }
-  onKeyUp(evento: KeyboardEvent){
+  onKeyUp(evento: any){
     console.log();
-    this.valorAtual = (<HTMLInputElement>evento.target).value;
+   // this.valorAtual = (<HTMLInputElement>evento.target).value;
+   this.valorAtual = evento
   }
   
   salvarValor(valor: any) {
@@ -45,6 +49,11 @@ export class DataBindingComponent {
   }
   onMouseOverOut(){
     this.isMouseOver = !this.isMouseOver;
+  }
+  foo(valor:any = {}){
+    alert(valor.pNome)
+    this.nome2 = valor.pNome
+    this.email = valor.userEmail
   }
 
 }
