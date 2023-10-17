@@ -27,6 +27,10 @@ export class DataBindingComponent {
   nome: any = 'abc';
   nome2 = ""
   email = ""
+  nomeDoCurso = "Angular"
+
+
+
   getValor(){
     return 1;
   }
